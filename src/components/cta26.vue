@@ -1,3 +1,59 @@
+<template>
+  <div class="thq-section-padding">
+    <div class="thq-section-max-width">
+      <div class="cta26-accent2-bg">
+        <div class="cta26-accent1-bg">
+          <div class="cta26-container2">
+            <div class="cta26-content">
+              <span>
+                <slot name="heading1">
+                  <!--Default content for heading1-->
+                  <div class="cta26-fragment1">
+                    <span class="cta26-text4 thq-heading-2">
+                      Unisciti a noi nella conservazione della pietra
+                    </span>
+                  </div>
+                </slot>
+              </span>
+              <p>
+                <slot name="content1">
+                  <!--Default content for content1-->
+                  <div class="cta26-fragment2">
+                    <p class="cta26-text5 thq-body-large">
+                      Scopri come puoi contribuire alla nostra missione e
+                      diventare parte della nostra comunità di scalpellini.
+                    </p>
+                  </div>
+                </slot>
+              </p>
+            </div>
+            <div class="cta26-actions">
+              <button type="button" class="thq-button-filled cta26-button">
+                <span>
+                  <slot name="action1">
+                    <!--Default content for action1-->
+                    <div class="cta26-fragment3">
+                      <span class="cta26-text6">Iscriviti ora</span>
+                    </div>
+                  </slot>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'CTA26',
+  props: {},
+}
+</script>
+
+<style scoped>
 .cta26-accent2-bg {
   gap: var(--dl-space-space-oneandhalfunits);
   display: flex;
@@ -53,11 +109,20 @@
   align-items: flex-start;
   justify-content: flex-end;
 }
+.cta26-fragment1 {
+  display: contents;
+}
 .cta26-text4 {
   display: inline-block;
 }
+.cta26-fragment2 {
+  display: contents;
+}
 .cta26-text5 {
   display: inline-block;
+}
+.cta26-fragment3 {
+  display: contents;
 }
 .cta26-text6 {
   display: inline-block;
@@ -79,3 +144,4 @@
     flex: 1;
   }
 }
+</style>
